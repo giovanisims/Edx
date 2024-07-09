@@ -1,0 +1,2 @@
+It is necessary to install the following library:
+  Pygame: https://pypi.org/project/pygame/
