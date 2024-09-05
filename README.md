@@ -1,6 +1,6 @@
 # Edx
 
-Description : 
+#### Description:
 This is a repo for courses I've done/am doing on Edx.
 
 * CS50P: Finished 2024
