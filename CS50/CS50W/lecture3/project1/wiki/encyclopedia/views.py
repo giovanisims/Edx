@@ -71,10 +71,12 @@ def edit(request, title):
             content = form.cleaned_data["content"]
             util.save_entry(title, content)
             return HttpResponseRedirect(reverse("entry", args=[title]))
+    else:
+        content = util.get_entry(title)
+        form = EditPageForm(initial={'content': content})
     return render(request, "encyclopedia/edit.html", {
-        "form": EditPageForm(),
-        "title": title,
-        "content": util.get_entry(title)
+        "form": form,
+        "title": title
     })
 
 def random_page(request):
